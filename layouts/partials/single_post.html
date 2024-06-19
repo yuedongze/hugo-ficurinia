@@ -7,11 +7,9 @@
         <p class="date">
             <span title='{{ i18n "date" }}'> </span>
             {{- partial "date.html" .Date -}}
-            {{- if .Site.Params.showLastmod | default false -}}
             {{- if ne (.Date | time.Format "Jan 02, 2006 3:04 PM Z07:00") (.Lastmod.Format "Jan 02, 2006 3:04 PM Z07:00")
             -}}
             - updated: {{- partial "date.html" .Lastmod -}}
-            {{ end }}
             {{ end }}
         </p>
     {{ end }}
