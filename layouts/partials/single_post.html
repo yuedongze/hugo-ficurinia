@@ -9,7 +9,7 @@
             {{- partial "date.html" .Date -}}
             {{- if ne (.Date | time.Format "Jan 02, 2006 3:04 PM Z07:00") (.Lastmod.Format "Jan 02, 2006 3:04 PM Z07:00")
             -}}
-            - updated: {{- partial "date.html" .Lastmod -}}
+            (updated: {{- partial "date.html" .Lastmod -}})
             {{ end }}
         </p>
     {{ end }}
