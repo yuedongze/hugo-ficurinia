@@ -136,6 +136,8 @@ summaryLength = 70  # number of words for article summaries
     forceRedirect = false
 
     infiniteScrolling = false  # activates infinite scrolling instead of regular pagination
+                               # NOTE: you need to enable JSON output for this to work!
+                               #       look at the [outputs] section below
     enableFooterColumns = false  # activates footer columns, as described below
     enableJumbotron = false  # enables jumbotron, as described below
     # related articles will be selected randomly based on tags and shown at
