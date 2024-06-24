@@ -11,8 +11,8 @@
 
     {{ if .OutputFormats.Get "RSS" }}
         {{ with .OutputFormats.Get "RSS" }}
-          <link href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
-          <link href="{{ .Permalink }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
+          <link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
+          <link href="{{ .RelPermalink }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
         {{ end }}
     {{ end }}
 
@@ -36,7 +36,7 @@
         <link rel="stylesheet" href="https://latest.cactus.chat/style.css" type="text/css">
     {{ end }}
     {{ $style := resources.Get "/scss/style.scss" | resources.ExecuteAsTemplate "/scss/style.scss" . | resources.ToCSS (dict "targetPath" "css/styles.css" "outputStyle" "compressed" "enableSourceMap" "true") | resources.Fingerprint "sha512" }}
-    <link type="text/css" rel="stylesheet" href={{ $style.Permalink }} integrity="{{ $style.Data.Integrity }}" />
+    <link type="text/css" rel="stylesheet" href={{ $style.RelPermalink }} integrity="{{ $style.Data.Integrity }}" />
     {{- partial "inject/head.html" . -}}
     {{- partial "head_meta_seo.html" . -}}
     {{- partial "head_meta_opengraph.html" . -}}
