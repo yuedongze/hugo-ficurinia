@@ -69,6 +69,8 @@ summaryLength = 70  # number of words for article summaries
     fontFamily = "JetBrains Mono"  # changes the font, default "JetBrains Mono"
     titleFontFamily = "JetBrains Mono"  # font used for titles and headings
     monospaceFontFamily = "JetBrains Mono"  # changes the monospace font for code, default "JetBrains Mono"
+    loadFonts = ["foo-font", "bar-font"] # loads `/foo-font/foo-font.css` and `/bar-font/bar-font.css`
+    defaultFonts = true # if set to false, will skip loading the theme's default fonts
 
     # multipliers applied to font sizes, useful for custom fonts that may be too big or too small
     titleFontSizeMultiplier = 1.0
